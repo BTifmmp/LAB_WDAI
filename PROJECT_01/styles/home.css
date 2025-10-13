@@ -1,0 +1,332 @@
+body {
+    background-color: rgb(240, 238, 233);
+    width: 100%;
+    color: rgb(29, 29, 29);
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1380px 1fr;  /* mix px and fr */
+    grid-template-rows: 1fr auto 1fr;  /* mix px and auto */
+}
+
+#hero h1 {
+    font-size: 5rem;
+    line-height: 0.9;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#hero p {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.hero-text-container {
+    padding-left: 10px;
+    padding-right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.bl {
+    border-left: 2px solid rgb(36, 36, 36);
+}
+
+.br {
+    border-right: 2px solid rgb(36, 36, 36);
+}
+
+.bt {
+    border-top: 2px solid rgb(36, 36, 36);
+}
+
+.bb {
+    border-bottom: 2px solid rgb(36, 36, 36);
+}
+
+.bl-white {
+    border-left: 2px solid rgb(177, 177, 177);
+}
+
+.br-white {
+    border-right: 2px solid rgb(177, 177, 177);
+}
+
+.bt-white {
+    border-top: 2px solid rgb(177, 177, 177);
+}
+
+.bb-white {
+    border-bottom: 2px solid rgb(177, 177, 177);
+}
+
+
+#sponsors {
+    display: grid;
+    grid-template-columns: 1fr 1380px 1fr;  /* mix px and fr */
+    grid-template-rows: 1fr;  /* mix px and auto */
+    width: 100%;
+    height: 80px;
+}
+
+.sponsor-logos {
+    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+.sponsors-container {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#sponsors h2 {
+    padding: 10px;
+    font-size: 2rem;
+    line-height: 0.9;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#famous-art {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1380px 1fr;  /* mix px and fr */
+    grid-template-rows: auto 600px 600px;  /* mix px and auto */
+}
+
+#famous-art h2 {
+    font-size: 3.5rem;
+    line-height: 0.9;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: right;
+}
+
+#famous-art p {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.famous-text-container {
+    padding: 10px;
+    padding-top: 40px;
+    padding-left: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+#find-us {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1380px 1fr;  /* mix px and fr */
+    grid-template-rows: auto;  /* mix px and auto */
+}
+
+.find-us-container {
+    display: flex;
+}
+
+.find-us-text-container {
+    padding: 10px;
+    padding-bottom: 60px;
+    padding-top: 15px;
+    padding-right: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+#find-us h2 {
+    font-size: 3.5rem;
+    line-height: 0.9;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+
+#find-us p {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#find-us address {
+    font-style: normal;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#find-us .highlight {
+    margin: 3px 0px;
+    padding: 5px;
+    background-color: rgb(255, 246, 162);
+    display: inline-block;
+}
+
+
+#meme-lectures {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    background-image: url('https://imgs.search.brave.com/Oe_A97kS2cj5MfUH9ODE5KaksDXsRSR9CahNbc2jf3s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA4LzY1LzkxLzg0/LzM2MF9GXzg2NTkx/ODQ4MF9MY1JFWm52/S0NKZWY2azdSWUE2/VmJDSFh4aU9ZSFNE/bi5qcGc'); /* path to your image */
+    background-size: cover;       /* make it cover entire element */
+    background-position: center;  /* center image */
+    background-repeat: no-repeat; /* don’t repeat */
+
+   
+}
+
+.meme-lectures-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1380px 1fr;  /* mix px and fr */
+    grid-template-rows: 1fr auto 1fr;  /* mix px and auto */
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+#meme-lectures h2 {
+    font-size: 5rem;
+    line-height: 0.9;
+    color: rgb(247, 247, 247);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+
+#meme-lectures .overlay {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* dark tint */
+  z-index: 1;
+}
+
+#meme-lectures p {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    color: rgb(247, 247, 247);
+    max-width: 600px;
+}
+
+.meme-lectures-text-container {
+    background-color: rgb(24, 24, 24);
+    margin-right: 50%;
+    padding: 30px;
+    text-align: left;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#workshops {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1380px 1fr;  /* mix px and fr */
+    grid-template-rows: auto 3fr 3fr;  /* mix px and auto */
+}
+
+#workshops h2 {
+    background-color: rgb(211, 197, 221);
+    font-size: 3rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 0.9;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+#gallery-action {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1380px 1fr;  /* mix px and fr */
+    grid-template-rows: 300px;  /* mix px and auto */
+}
+
+#gallery-action h2 {
+    font-size: 3.5rem;
+    line-height: 0.9;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+
+#gallery-action p {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-text-container {
+    padding: 10px;
+    padding-right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+#gallery-action button {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(240, 238, 233);
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(240, 238, 233);
+}
+
+nav a {
+    
+    color: rgb(29, 29, 29);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
