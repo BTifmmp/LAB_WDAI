@@ -2,20 +2,31 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>My Website</title>
-    <link
-      rel="stylesheet"
-      href="./style.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <main class="main-container">
-      <h1>Welcome to My Website</h1>
+      <h1>Wykorzystanie flex do pozycjonownia</h1>
+      <div style="gap: 10px; display: flex; flex-direction: column">
+        <div style="display: flex; gap: 10px">
+          <div class="sq" style="background-color: red"></div>
+          <div class="sq" style="background-color: rgb(0, 255, 191)"></div>
+        </div>
+        <div style="display: flex; gap: 10px">
+          <div class="sq" style="background-color: rgb(97, 36, 116)"></div>
+          <div class="sq" style="background-color: rgb(33, 128, 145)"></div>
+          <div class="sq">
+            <image
+              class="cat-image"
+              src="./cat_image.png"
+              alt="Cat on star"
+              style="max-width: 100%; max-height: 100%"
+            />
+          </div>
+        </div>
+      </div>
     </main>
-    <script src="index.js"></script>
   </body>
 </html>
