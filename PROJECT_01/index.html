@@ -19,26 +19,30 @@
 <body>
 	<!-- Header -->
 	<header class="bb">
-		<nav style="width: 100%;">
-			<ul style="display: flex; justify-content: space-around; align-items: center; height: 100%; width: 100%;">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Gallery</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+		<nav style="width: 100%; max-width: 1380px; margin: 0 auto;">
+				<ul style="display: flex; gap: 50px; justify-content: end; padding-right: 60px;">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
 		</nav>
 	</header>
 
 	<main>
-
-	<!-- Hero Section -->
 		<section id="hero">
 			<div ></div>
 			<div class="bl"></div>
 			<div class="bl"></div>
 			<div ></div>
-			<div class="hero-text-container bb bl">
-					<h1>MEME ART <br/> EXHIBIT IN <br/> KRAKOW</h1>
-					<p>Discover a curated collection of the funniest and most creative memes transformed into digital art. Explore, laugh, and get inspired!</p>
+			<div class="bb bl hero-content-container">
+				<div style="flex: 1;" class="">
+						<h1>MEME ART <br/> EXHIBIT IN <br/> KRAKOW</h1>
+						<p>Discover a curated collection of the funniest and most creative memes transformed into digital art. Explore, laugh, and get inspired!</p>
+				</div>
+				<div style="flex: 1;" class="hero-img">
+					<img src="https://imgs.search.brave.com/JUvKD6lQkwC3jUCNQLEAoPz8ClU8vhNtcBL5voS1Bkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE5/NTA5NzkxMC9waG90/by92aXNpdG9ycy1h/cHByZWNpYXRpbmct/YWJzdHJhY3QtYXJ0/LWF0LWFuLWV4aGli/aXRpb24taW4tYS1t/b2Rlcm4tZ2FsbGVy/eS1pbi10aGUtYWZ0/ZXJub29uLWxpZ2h0/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz13cHo3XzBBcnBm/WldDb2JZTFotekcy/S1ZELTkzTXctWGhp/dFpxeFlmTDdrPQ" alt="Hero Image" 
+					style="width: 100%; height: 100%; object-fit: cover;">
+				</div>
 			</div>
 			<div class="bl bb"></div>
 			<div class="bb"></div>
@@ -46,21 +50,19 @@
 			<div class="bb"></div>
 		</section>
 
-	<!-- Gallery Section -->
 		<section id="sponsors" class="bb">
 			<div></div>
 			<div class="bl sponsors-container" style="background-color: rgb(161, 201, 238);">
 				<h2>Our Sponsors</h2>
 				<div class="sponsor-logos">
-					<div>Sponsor1</div>
-					<div>Sponsor2</div>
-					<div>Sponsor3</div>
-					<div>Sponsor4</div>
+					<img src="https://picsum.photos/200/100?grayscale" alt="Sponsor 1">
+					<img src="https://picsum.photos/200/100?grayscale" alt="Sponsor 2">
+					<img src="https://picsum.photos/200/100?grayscale" alt="Sponsor 3">
+					<img src="https://picsum.photos/200/100?grayscale" alt="Sponsor 4">	
 				</div>
 			</div>
 			<div style="background-color: rgb(161, 201, 238);"></div>
 		</section>
-
 
 		<section id="famous-art">
 			<div style="background-color: rgb(221, 148, 153);"></div>
@@ -70,28 +72,58 @@
 			</div>
 			<div class="bl"></div>
 			<div class="" style="background-color: rgb(221, 148, 153);"></div>
-			<div class="bl bb"></div>
+			<div class="bl bb">
+				<div class="art-row">
+					<div class="art-row-item">
+						<img src="https://picsum.photos/200/100?grayscale" alt="Sponsor 1" class="art-img">
+						<strong>Distracted Boyfriend</strong>
+						<p>A humorous take on relationship dynamics, this meme has been transformed into a vibrant digital artwork.</p>
+					</div>
+					<div class="art-row-item bl">
+						<img src="https://picsum.photos/200/100?grayscale" alt="Sponsor 1" class="art-img">
+						<strong>Distracted Boyfriend</strong>
+						<p>A humorous take on relationship dynamics, this meme has been transformed into a vibrant digital artwork.</p>
+					</div>
+				</div>
+			</div>
 			<div class="bl bb"></div>
 			<div class="bb" style="background-color: rgb(221, 148, 153);"></div>
-			<div class="bb bl"></div>
+			<div class="bb bl">
+				<div class="art-row">
+					<div class="art-row-item">
+						<img src="https://picsum.photos/200/200?grayscale" alt="Sponsor 1" class="art-img">
+						<strong>Distracted Boyfriend</strong>
+						<p>A humorous take on relationship dynamics, this meme has been transformed into a vibrant digital artwork.</p>
+					</div>
+					<div class="art-row-item bl">
+						<img src="https://picsum.photos/200/400?grayscale" alt="Sponsor 1" class="art-img">
+						<strong>Distracted Boyfriend</strong>
+						<p>A humorous take on relationship dynamics, this meme has been transformed into a vibrant digital artwork.</p>
+					</div>
+				</div>
+			</div>
 			<div class="bb bl"></div>
 		</section>
 
 		<section id="find-us">
 			<div class="bb"></div>
-			<div class="bl find-us-container bb" style="background-color: rgb(185, 219, 182);">
+			<div class="bl find-us-container bb" style="background-color: rgb(182, 219, 210);">
 				<div class="find-us-text-container" style="flex:1">
-					<h2>Where to find us</h2>
-					<p>The Meme Art Exhibit in Krakow is located at the heart of the city, easily accessible by public transport.</p>
-					<address>
-						<span class="highlight">Meme Art Exhibit</span><br>
-						<span class="highlight">ul. Przykładowa 123</span><br>
-						<span class="highlight">30-001 Kraków, Poland</span>
-					</address>
+					<div style="padding: 10px;">
+						<h2>Where to find us</h2>
+						<p>The Meme Art Exhibit in Krakow is located at the heart of the city, easily accessible by public transport.</p>
+						<address>
+							<span class="highlight">Meme Art Exhibit</span><br>
+							<span class="highlight">ul. Przykładowa 123</span><br>
+							<span class="highlight">30-001 Kraków, Poland</span>
+						</address>
+					</div>
 				</div>
-					<div style="flex:1"></div>
+				<div style="flex:1">
+					<img src="https://picsum.photos/2000/1400?grayscale" alt="Sponsor 1" style="width: 100%; height: 100%; object-fit: contain; display: block; max-height: 500px;">
+				</div>
 			</div>
-			<div class="bb" style="background-color: rgb(185, 219, 182);"></div>
+			<div class="bb" style="background-color: rgb(182, 219, 210);"></div>
 		</section>
 
 		<section id="meme-lectures">
@@ -102,9 +134,11 @@
 					<div class=""></div>
 		
 					<div class=""></div>
-					<div class=" meme-lectures-text-container">
-						<h2>Meme<br/>Lectures</h2>
-						<p>Participate in our hands-on workshops to learn the art of meme creation. Our experienced instructors will guide you through the process.</p>
+					<div style="display: flex;">
+						<div class=" meme-lectures-text-container">
+							<h2>Meme<br/>Lectures</h2>
+							<p>Participate in our hands-on workshops to learn the art of meme creation. Our experienced instructors will guide you through the process.</p>
+						</div>
 					</div>
 					<div class=""></div>
 
@@ -119,10 +153,34 @@
 			<h2 class="bl bb bt">Workshops</h2>
 			<div class="bb bt" style="background-color: rgb(211, 197, 221);"></div>
 			<div class="bb"></div>
-			<div class="bl bb"></div>
-			<div class="bl" style="background-color: rgb(211, 197, 221);"></div>
-			<div class=""></div>
-			<div class="bl bb"></div>
+			<div class="bl bb">
+				<div class="workshops-flex">
+					<div class="workshops-card">
+						<strong>Meme Creation 101</strong>
+						<p>Learn the basics of meme creation, from concept to execution. Suitable for beginners.</p>
+					</div>
+					<div class="workshops-card">
+						<strong>Meme Creation 101</strong>
+						<p>Learn the basics of meme creation, from concept to execution. Suitable for beginners.</p>
+					</div>
+					<div class="workshops-card">
+						<strong>Meme Creation 101</strong>
+						<p>Learn the basics of meme creation, from concept to execution. Suitable for beginners.</p>
+					</div>
+					<div class="workshops-card">
+						<strong>Meme Creation 101</strong>
+						<p>Learn the basics of meme creation, from concept to execution. Suitable for beginners.</p>
+					</div>
+					<div class="workshops-card">
+						<strong>Meme Creation 101</strong>
+						<p>Learn the basics of meme creation, from concept to execution. Suitable for beginners.</p>
+					</div>
+					<div class="workshops-card">
+						<strong>Meme Creation 101</strong>
+						<p>Learn the basics of meme creation, from concept to execution. Suitable for beginners.</p>
+					</div>
+				</div>
+			</div>
 			<div class="bl bb" style="background-color: rgb(211, 197, 221);"></div>
 		</section>
 
@@ -136,22 +194,11 @@
 			<div class="bb" style="background-color: rgb(255, 220, 144);"></div>
 		</section>
 
-	 
-
 	</main>
 
-	<!-- Footer -->
 	<footer>
-		<p>&copy; 2025 Meme Art Exhibit - Krakow. All rights reserved.</p>
-		<nav>
-			<ul>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Terms of Service</a></li>
-			</ul>
-		</nav>
+		<p>&copy; 2025 Meme Art Exhibit - Krakow</p>
+		<p style="margin-top: 10px;">Made by Blazej Turczynowicz</p>
 	</footer>
-
-	<!-- Scripts -->
-	<script src="scripts.js"></script>
 </body>
 </html>
