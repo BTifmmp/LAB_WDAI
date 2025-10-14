@@ -1,0 +1,118 @@
+#contact {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url('https://imgs.search.brave.com/Oe_A97kS2cj5MfUH9ODE5KaksDXsRSR9CahNbc2jf3s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA4LzY1LzkxLzg0/LzM2MF9GXzg2NTkx/ODQ4MF9MY1JFWm52/S0NKZWY2azdSWUE2/VmJDSFh4aU9ZSFNE/bi5qcGc'); /* path to your image */
+    background-size: cover;       /* make it cover entire element */
+    background-position: center;  /* center image */
+    background-repeat: no-repeat; /* don’t repeat */
+}
+
+.contact-container {
+    background-color: rgb(240, 238, 233);
+    position: relative;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 100px;
+    z-index: 10;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px;
+    margin-top: 80px;
+} 
+
+#contact h1 {
+    font-size: 2rem;
+    line-height: 0.9;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contact h2 {
+    font-size: 1.3rem;
+    line-height: 0.9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#contact .highlight {
+    color: white;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 5px;
+    background-color: rgb(29, 29, 29);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#contact .overlay {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* dark tint */
+  z-index: 1;
+}
+
+#contact p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    margin-top: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline-style: solid;
+    outline-width: 2px;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #000000;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #303030;
+}
+
+.contact-form button:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+@media (max-width: 1380px) {
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the Meme Art Exhibit in Krakow — a gallery celebrating internet culture and humor."
+    />
+    <meta name="author" content="Blazej Turczynowicz" />
+    <title>Meme Art Exhibit - Krakow</title>
+    <link rel="stylesheet" href="styles/css-reset.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <header class="bb">
+      <nav style="width: 100%; max-width: 1380px; margin: 0 auto">
+        <ul
+          style="
+            display: flex;
+            gap: 50px;
+            justify-content: end;
+            padding-right: 60px;
+          "
+        >
+          <li><a href="./">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="contact">
+        <div class="bl overlay"></div>
+        <div style="width: 100%; display: flex; justify-content: center;">
+          <div class="contact-container">
+            <h1>Contact Us</h1>
+            <h2>Our address</h2>
+            <address>
+              <span class="highlight">Meme Art Exhibit</span><br />
+              <span class="highlight">ul. Przykładowa 123</span><br />
+              <span class="highlight">30-001 Kraków, Poland</span>
+            </address>
+            <h2 style="margin-top: 40px;">Contact Form</h2>
+              <form action="submit_form.php" method="post" class="contact-form">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+  
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+  
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required style="resize: vertical;"></textarea>
+
+              <button type="submit">SEND MESSAGE</button>
+              </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Meme Art Exhibit - Krakow</p>
+      <p style="margin-top: 10px">Made by Blazej Turczynowicz</p>
+    </footer>
+
+  </body>
+</html>
