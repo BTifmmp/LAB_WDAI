@@ -26,14 +26,14 @@ h1 {
     width: 100%;
 }
 
-#virtual-tour {
+#live-meme {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1380px 1fr;
   grid-template-rows: auto;
 }
 
-.virtual-tour-container {
+.live-meme-container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -42,7 +42,7 @@ h1 {
   padding-top: 40px;
 }
 
-#virtual-tour h2 {
+#live-meme h2 {
   font-size: 3rem;
   line-height: 0.9;
   font-family: "Rubik Mono One", monospace;
@@ -50,7 +50,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-#virtual-tour p {
+#live-meme p {
   font-size: 1.3rem;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 600px;
@@ -88,7 +88,7 @@ h1 {
 /* ====== MEME GRID ====== */
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 40px;
   padding: 60px;
 }
@@ -135,22 +135,22 @@ h1 {
     font-size: 12px;
   }
 
-  #virtual-tour,
+  #live-meme,
   #featured-memes {
     grid-template-columns: 0px 1fr 0px;
   }
 
-  .virtual-tour-container {
+  .live-meme-container {
     flex-direction: column;
     text-align: center;
   }
 
-  #virtual-tour h1 {
+  #live-meme h1 {
     font-size: 2.5rem;
     text-align: center;
   }
 
-  #virtual-tour p {
+  #live-meme p {
     font-size: 1.2rem;
     text-align: center;
   }
@@ -171,5 +171,15 @@ h1 {
   .featured-grid {
     padding: 20px;
     gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .featured-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
   }
 }
