@@ -106,6 +106,7 @@ nav a:hover::before {
 
 /* Container (hidden by default) */
 #image-display {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
