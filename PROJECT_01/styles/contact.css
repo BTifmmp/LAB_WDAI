@@ -83,12 +83,14 @@
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
     padding: 10px;
     border: 2px solid #ccc;
     margin-top: 5px;
 }
 
+.contact-form select:focus,
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline-style: solid;
