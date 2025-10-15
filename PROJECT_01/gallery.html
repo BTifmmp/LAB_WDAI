@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/gallery.css" />
 
+    <script src="scripts/image-display.js" defer></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -101,22 +103,22 @@
         <div class="bb bl">
           <div class="featured-grid">
             <div class="meme-card my-frame">
-              <img src="assets/memes/meme_0.webp" alt="Meme 0" />
+              <img src="assets/memes/meme_0.webp" data-enlarge alt="Meme 0" />
             </div>
             <div class="meme-card my-frame">
-              <img src="assets/memes/meme_1.webp" alt="Meme 1" />
+              <img src="assets/memes/meme_1.webp" data-enlarge alt="Meme 1" />
             </div>
             <div class="meme-card my-frame">
-              <img src="assets/memes/meme_2.webp" alt="Meme 2" />
+              <img src="assets/memes/meme_2.webp" data-enlarge alt="Meme 2" />
             </div>
             <div class="meme-card my-frame">
-              <img src="assets/memes/meme_3.webp" alt="Meme 3" />
+              <img src="assets/memes/meme_3.webp" data-enlarge alt="Meme 3" />
             </div>
             <div class="meme-card my-frame">
-              <img src="assets/memes/meme_4.webp" alt="Meme 4" />
+              <img src="assets/memes/meme_4.webp" data-enlarge alt="Meme 4" />
             </div>
             <div class="meme-card my-frame">
-              <img src="assets/memes/meme_5.webp" alt="Meme 5" />
+              <img src="assets/memes/meme_5.webp" data-enlarge alt="Meme 5" />
             </div>
             
           </div>
@@ -130,5 +132,12 @@
       <p>&copy; 2025 Meme Art Exhibit - Krakow</p>
       <p style="margin-top: 10px">Made by Blazej Turczynowicz</p>
     </footer>
+
+    <!-- Image Display -->
+    <div id="image-display">
+      <span id="close-btn">&times;</span>
+      <img id="enlarged-image" src="" alt="Enlarged Meme" />
+    </div>
+
   </body>
 </html>
