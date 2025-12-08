@@ -1,35 +1,41 @@
 let time = 0;
 let isRunning = false;
+let intervalId = null;
 
-let timerValElem = document.getElementById("timer-val");
+const timerValElem = document.getElementById("timer-val");
 
-async function toggleTimer() {
-  isRunning = !isRunning;
-
+function toggleTimer() {
   if (isRunning) {
-    updateTimer();
+    clearInterval(intervalId);
+    intervalId = null;
+    isRunning = false;
+    timerValElem.textContent = formatTime(time);
+  } else {
+    isRunning = true;
+    intervalId = setInterval(updateTimer, 10);
   }
 }
 
-async function updateTimer() {
+function updateTimer() {
+  time += 10;
   timerValElem.textContent = formatTime(time);
-
-  await new Promise((r) => setTimeout(r, 50));
-  if (!isRunning) return;
-
-  time += 0.05;
-  updateTimer();
 }
 
 function resetTimer() {
+  clearInterval(intervalId);
+  intervalId = null;
+  isRunning = false;
   time = 0;
+  timerValElem.textContent = formatTime(time);
 }
 
-function formatTime(seconds) {
-  displaySeconds = Math.floor(seconds);
-  if (seconds < 60) {
+function formatTime(ms) {
+  displaySeconds = Math.floor(ms / 1000);
+  if (displaySeconds < 60) {
     return displaySeconds + "s";
   } else {
-    return Math.round(seconds / 60) + "m" + (displaySeconds % 60) + "s";
+    return Math.round(displaySeconds / 60) + "m" + (displaySeconds % 60) + "s";
   }
 }
+
+timerValElem.textContent = formatTime(time);

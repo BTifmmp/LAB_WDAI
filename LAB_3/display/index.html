@@ -4,18 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Lab3</title>
+    <style>
+      .product-container {
+        background-color: #ddd;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 40px;
+      }
+    </style>
   </head>
   <body>
   <label for="search">Search</label>
-  <input name="search" type="text">
+  <input id="search" name="search" type="text" onchange="onSearchChange()">
   <label for="order">Order</label>
-  <select name="order" form="order">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option>
+  <select id="order" name="order" form="order" onchange="onOrderChange()">
+    <option value="org">Original</option>
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
   </select>
-
+  <div id="container"></div>
   </body>
   <script src="script.js"></script>
 </html>
