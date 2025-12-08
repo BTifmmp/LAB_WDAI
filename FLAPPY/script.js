@@ -429,7 +429,7 @@ const PlayingState = {
     this.score = 0;
     this.paused = false;
     this.isOver = false;
-    this.offsetX = 0;
+    (this.velocity = 200), (this.offsetX = 0);
     this.bird = Bird();
     this.pipes = [];
     this._createInitialPipes();
@@ -451,12 +451,21 @@ const PlayingState = {
     GlobalRenderer.drawBird(this.bird);
     GlobalRenderer.drawScore(this.score);
 
+    const groundY =
+      canvas.height -
+      AssetManager.baseImage.height -
+      AssetManager.birdImages[0].height / 2;
+    -AssetManager.baseImage.height;
+
+    if (this.isOver && this.bird.position.y >= groundY)
+      GameStateMachine.changeState(GameStates.GAME_OVER);
+
     if (this.isOver) return;
 
     if (Physics.checkGroundCollision(this.bird)) {
       this.isOver = true;
       this.bird.onGroundCollision();
-      GameStateMachine.changeState(GameStates.GAME_OVER);
+      this.velocity = 0;
     }
 
     const collisionPipeIndex = Physics.checkPipeCollision(
@@ -468,7 +477,7 @@ const PlayingState = {
     if (collisionPipeIndex !== -1) {
       this.isOver = true;
       this.bird.onPipeCollision();
-      GameStateMachine.changeState(GameStates.GAME_OVER);
+      this.velocity = 0;
     }
 
     const scoredPipeIndex = Physics.checkPipeScore(

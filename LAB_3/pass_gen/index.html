@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lab3</title>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column;">
+    <label for="min-val">Min lenght</label>
+    <input name="min-val" type="number" label="min" min="1" value="10"/>
+    <label for="min-val">Max lenght</label>
+    <input name="max-val" type="number" label="max" min="2" value="20"/>
+    <label for="min-val">Capital letters</label>
+    <input name="capital" type="checkbox"/>
+    <label for="min-val">Spaces</label>
+    <input name="spaces" type="checkbox"/>
+    </div>
+
+    <button onclick="generate()">Generate</button>
+  </body>
+  <script src="script.js"></script>
+</html>
