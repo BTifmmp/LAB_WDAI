@@ -1,0 +1,23 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "const.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:all": "concurrently \"npm run start:books\" \"npm run start:orders\" \"npm run start:users\"",
+    "start:books": "cd books && npm run start",
+    "start:orders": "cd orders && npm run start",
+    "start:users": "cd users && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3"
+  }
+}

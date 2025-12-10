@@ -1,0 +1,348 @@
+{
+  "info": {
+    "_postman_id": "06b52778-d14f-4d33-8769-e70a3c75d4e4",
+    "name": "Microservices Lab 4 - Bookstore",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Kolekcja do testowania Serwisu Książek (3001), Zamówień (3002) i Użytkowników (3003) z weryfikacją JWT."
+  },
+  "item": [
+    {
+      "name": "Service 3: Users (Auth)",
+      "item": [
+        {
+          "name": "1. [POST] Rejestracja",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"testuser@example.com\",\n    \"password\": \"haslo123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3003/api/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3003",
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2. [POST] Logowanie i Pobranie Tokenu",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.token) {",
+                  "    pm.environment.set(\"authToken\", jsonData.token);",
+                  "    pm.environment.set(\"currentUserId\", jsonData.userId);",
+                  "    console.log(\"Token: \" + jsonData.token);",
+                  "    console.log(\"UserID: \" + jsonData.userId);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"testuser@example.com\",\n    \"password\": \"haslo123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3003/api/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3003",
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_is_open": true
+    },
+    {
+      "name": "Service 1: Books (3001)",
+      "item": [
+        {
+          "name": "1. [POST] Dodaj Książkę (Wymaga Autoryzacji)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.id) {",
+                  "    pm.environment.set(\"bookId\", jsonData.id);",
+                  "    console.log(\"Book ID: \" + jsonData.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Diuna\",\n    \"author\": \"Frank Herbert\",\n    \"year\": 1965\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3001/api/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "books"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2. [GET] Pobierz Wszystkie Książki (Publiczny)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/api/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "books"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3. [GET] Pobierz Książkę po ID (Publiczny)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/api/books/{{bookId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "books",
+                "{{bookId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4. [DELETE] Usuń Książkę (Wymaga Autoryzacji)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3001/api/books/{{bookId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "books",
+                "{{bookId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_is_open": true
+    },
+    {
+      "name": "Service 2: Orders (3002)",
+      "item": [
+        {
+          "name": "1. [POST] Dodaj Zamówienie (Weryfikuje Książkę, Nie Wymaga Auth)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.id) {",
+                  "    pm.environment.set(\"orderId\", jsonData.id);",
+                  "    console.log(\"Order ID: \" + jsonData.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userId\": {{currentUserId}},\n    \"bookId\": 1,\n    \"quantity\": 2\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3002/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3002",
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2. [GET] Pobierz Zamówienia Użytkownika (Wymaga Autoryzacji)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3002/api/orders/{{currentUserId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3002",
+              "path": [
+                "api",
+                "orders",
+                "{{currentUserId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3. [PATCH] Aktualizuj Ilość (Wymaga Autoryzacji)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"quantity\": 5\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3002/api/orders/{{orderId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3002",
+              "path": [
+                "api",
+                "orders",
+                "{{orderId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4. [DELETE] Usuń Zamówienie (Wymaga Autoryzacji)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3002/api/orders/{{orderId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3002",
+              "path": [
+                "api",
+                "orders",
+                "{{orderId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_is_open": true
+    }
+  ]
+}
