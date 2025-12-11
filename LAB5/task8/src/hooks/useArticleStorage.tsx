@@ -3,7 +3,7 @@ import Article from "../model/Article";
 
 // Definicja, co hook będzie zwracał
 interface ArticleStorageActions {
-  getArticles: () => Article[];
+  articles: Article[];
   addArticle: (newArticle: Omit<Article, "id">) => Article;
   removeArticle: (articleId: number) => void;
   clearArticles: () => void;
@@ -35,10 +35,6 @@ export function useArticleStorage(): ArticleStorageActions {
     }
   }, [articles]);
 
-  const getArticles = (): Article[] => {
-    return articles;
-  };
-
   const addArticle = (newArticle: Omit<Article, "id">): Article => {
     const articleWithId: Article = {
       ...newArticle,
@@ -63,7 +59,7 @@ export function useArticleStorage(): ArticleStorageActions {
   };
 
   return {
-    getArticles,
+    articles,
     addArticle,
     removeArticle,
     clearArticles,

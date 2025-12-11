@@ -2,8 +2,7 @@ import ArticleCard from "../components/ArticleCard";
 import { useArticleStorage } from "../hooks/useArticleStorage";
 
 export default function Blog() {
-  const { getArticles } = useArticleStorage();
-  const articles = getArticles();
+  const { articles } = useArticleStorage();
   return (
     <div style={{ padding: "20px" }}>
       <nav style={{ display: "flex", flexDirection: "row" }}>

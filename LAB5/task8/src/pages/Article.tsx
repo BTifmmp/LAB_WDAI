@@ -3,8 +3,8 @@ import { useArticleStorage } from "../hooks/useArticleStorage";
 
 export default function Article() {
   const { id } = useParams<{ id: string }>();
-  const { getArticles } = useArticleStorage();
-  const article = getArticles().find((a) => a.id === Number(id)) || null;
+  const { articles } = useArticleStorage();
+  const article = articles.find((a) => a.id === Number(id)) || null;
 
   return (
     <div style={{ padding: "20px" }}>
