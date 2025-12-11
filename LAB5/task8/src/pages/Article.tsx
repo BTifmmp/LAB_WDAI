@@ -1,6 +1,4 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import ArticleModel from "../model/Article";
 import { useArticleStorage } from "../hooks/useArticleStorage";
 
 export default function Article() {
